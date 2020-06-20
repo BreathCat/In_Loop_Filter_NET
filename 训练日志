@@ -1,0 +1,148 @@
+lzh412@412:~/桌面/CNN_Net (复件)$ python3 main.py -m vrcnn
+imgs.size(): torch.Size([64, 1, 128, 128])
+labels.size(): torch.Size([64, 1, 128, 128])
+
+===> Epoch 1 starts:    lr= 0.000001 dB    Average Loss: 0.183401    Average PSNR: 7.47879011 dB
+===> Epoch 2 starts:    lr= 0.000001 dB    Average Loss: 0.158065    Average PSNR: 8.56164102 dB
+===> Epoch 3 starts:    lr= 0.000001 dB    Average Loss: 0.099399    Average PSNR: 12.80703932 dB
+===> Epoch 4 starts:    lr= 0.000001 dB    Average Loss: 0.022725    Average PSNR: 20.02106982 dB
+===> Epoch 5 starts:    lr= 0.000001 dB    Average Loss: 0.007251    Average PSNR: 20.69141200 dB
+===> Epoch 6 starts:    lr= 0.000001 dB    Average Loss: 0.006214    Average PSNR: 20.95899595 dB
+===> Epoch 7 starts:    lr= 0.000001 dB    Average Loss: 0.005745    Average PSNR: 21.16994781 dB
+===> Epoch 8 starts:    lr= 0.000001 dB    Average Loss: 0.005345    Average PSNR: 21.43083989 dB
+===> Epoch 9 starts:    lr= 0.000001 dB    Average Loss: 0.004924    Average PSNR: 21.73359585 dB
+===> Epoch 10 starts:    lr= 0.000001 dB    Average Loss: 0.004465    Average PSNR: 22.13690315 dB
+===> Epoch 11 starts:    lr= 0.000001 dB    Average Loss: 0.003977    Average PSNR: 22.58215002 dB
+===> Epoch 12 starts:    lr= 0.000001 dB    Average Loss: 0.003509    Average PSNR: 23.03786707 dB
+===> Epoch 13 starts:    lr= 0.000001 dB    Average Loss: 0.003110    Average PSNR: 23.46116770 dB
+===> Epoch 14 starts:    lr= 0.000001 dB    Average Loss: 0.002764    Average PSNR: 23.91164442 dB
+===> Epoch 15 starts:    lr= 0.000001 dB    Average Loss: 0.002424    Average PSNR: 24.41380965 dB
+===> Epoch 16 starts:    lr= 0.000001 dB    Average Loss: 0.002085    Average PSNR: 24.99577458 dB
+===> Epoch 17 starts:    lr= 0.000001 dB    Average Loss: 0.001763    Average PSNR: 25.64491500 dB
+===> Epoch 18 starts:    lr= 0.000001 dB    Average Loss: 0.001474    Average PSNR: 26.35613949 dB
+===> Epoch 19 starts:    lr= 0.000001 dB    Average Loss: 0.001232    Average PSNR: 27.02591632 dB
+===> Epoch 20 starts:    lr= 0.000001 dB    Average Loss: 0.001048    Average PSNR: 27.60773208 dBCheckpoint saved to ./model_save/20/model_path.pth
+
+===> Epoch 21 starts:    lr= 0.000001 dB    Average Loss: 0.000920    Average PSNR: 28.03829210 dB
+===> Epoch 22 starts:    lr= 0.000001 dB    Average Loss: 0.000837    Average PSNR: 28.34863632 dB
+===> Epoch 23 starts:    lr= 0.000001 dB    Average Loss: 0.000779    Average PSNR: 28.56565932 dB
+===> Epoch 24 starts:    lr= 0.000001 dB    Average Loss: 0.000738    Average PSNR: 28.74765273 dB
+===> Epoch 25 starts:    lr= 0.000001 dB    Average Loss: 0.000705    Average PSNR: 28.88985683 dB
+===> Epoch 26 starts:    lr= 0.000001 dB    Average Loss: 0.000680    Average PSNR: 29.00788455 dB
+===> Epoch 27 starts:    lr= 0.000001 dB    Average Loss: 0.000658    Average PSNR: 29.11884014 dB
+===> Epoch 28 starts:    lr= 0.000001 dB    Average Loss: 0.000639    Average PSNR: 29.22625555 dB
+===> Epoch 29 starts:    lr= 0.000001 dB    Average Loss: 0.000622    Average PSNR: 29.33302004 dB
+===> Epoch 30 starts:    lr= 0.000001 dB    Average Loss: 0.000605    Average PSNR: 29.44032303 dB
+===> Epoch 31 starts:    lr= 0.000001 dB    Average Loss: 0.000589    Average PSNR: 29.56152515 dB
+===> Epoch 32 starts:    lr= 0.000001 dB    Average Loss: 0.000573    Average PSNR: 29.66699340 dB
+===> Epoch 33 starts:    lr= 0.000001 dB    Average Loss: 0.000558    Average PSNR: 29.77172946 dB
+===> Epoch 34 starts:    lr= 0.000001 dB    Average Loss: 0.000545    Average PSNR: 29.87106081 dB
+===> Epoch 35 starts:    lr= 0.000001 dB    Average Loss: 0.000532    Average PSNR: 29.96006195 dB
+===> Epoch 36 starts:    lr= 0.000001 dB    Average Loss: 0.000521    Average PSNR: 30.04744203 dB
+===> Epoch 37 starts:    lr= 0.000001 dB    Average Loss: 0.000511    Average PSNR: 30.12371136 dB
+===> Epoch 38 starts:    lr= 0.000001 dB    Average Loss: 0.000503    Average PSNR: 30.19223917 dB
+===> Epoch 39 starts:    lr= 0.000001 dB    Average Loss: 0.000496    Average PSNR: 30.25293436 dB
+===> Epoch 40 starts:    lr= 0.000001 dB    Average Loss: 0.000489    Average PSNR: 30.30815589 dBCheckpoint saved to ./model_save/40/model_path.pth
+
+===> Epoch 41 starts:    lr= 0.000000 dB    Average Loss: 0.000485    Average PSNR: 30.31429335 dB
+===> Epoch 42 starts:    lr= 0.000000 dB    Average Loss: 0.000485    Average PSNR: 30.32043601 dB
+===> Epoch 43 starts:    lr= 0.000000 dB    Average Loss: 0.000484    Average PSNR: 30.32692226 dB
+===> Epoch 44 starts:    lr= 0.000000 dB    Average Loss: 0.000483    Average PSNR: 30.33373502 dB
+===> Epoch 45 starts:    lr= 0.000000 dB    Average Loss: 0.000483    Average PSNR: 30.34069321 dB
+===> Epoch 46 starts:    lr= 0.000000 dB    Average Loss: 0.000482    Average PSNR: 30.34775715 dB
+===> Epoch 47 starts:    lr= 0.000000 dB    Average Loss: 0.000481    Average PSNR: 30.35502078 dB
+===> Epoch 48 starts:    lr= 0.000000 dB    Average Loss: 0.000481    Average PSNR: 30.36233504 dB
+===> Epoch 49 starts:    lr= 0.000000 dB    Average Loss: 0.000480    Average PSNR: 30.36934848 dB
+===> Epoch 50 starts:    lr= 0.000000 dB    Average Loss: 0.000479    Average PSNR: 30.37627922 dB
+===> Epoch 51 starts:    lr= 0.000000 dB    Average Loss: 0.000478    Average PSNR: 30.38290143 dB
+===> Epoch 52 starts:    lr= 0.000000 dB    Average Loss: 0.000478    Average PSNR: 30.38976149 dB
+===> Epoch 53 starts:    lr= 0.000000 dB    Average Loss: 0.000477    Average PSNR: 30.39614742 dB
+===> Epoch 54 starts:    lr= 0.000000 dB    Average Loss: 0.000476    Average PSNR: 30.40262082 dB
+===> Epoch 55 starts:    lr= 0.000000 dB    Average Loss: 0.000476    Average PSNR: 30.40903141 dB
+===> Epoch 56 starts:    lr= 0.000000 dB    Average Loss: 0.000475    Average PSNR: 30.41524987 dB
+===> Epoch 57 starts:    lr= 0.000000 dB    Average Loss: 0.000475    Average PSNR: 30.42128543 dB
+===> Epoch 58 starts:    lr= 0.000000 dB    Average Loss: 0.000474    Average PSNR: 30.42746842 dB
+===> Epoch 59 starts:    lr= 0.000000 dB    Average Loss: 0.000473    Average PSNR: 30.43364039 dB
+===> Epoch 60 starts:    lr= 0.000000 dB    Average Loss: 0.000472    Average PSNR: 30.43978314 dBCheckpoint saved to ./model_save/60/model_path.pth
+
+===> Epoch 61 starts:    lr= 0.000000 dB    Average Loss: 0.000472    Average PSNR: 30.44589287 dB
+===> Epoch 62 starts:    lr= 0.000000 dB    Average Loss: 0.000471    Average PSNR: 30.45168223 dB
+===> Epoch 63 starts:    lr= 0.000000 dB    Average Loss: 0.000471    Average PSNR: 30.45705458 dB
+===> Epoch 64 starts:    lr= 0.000000 dB    Average Loss: 0.000470    Average PSNR: 30.46341595 dB
+===> Epoch 65 starts:    lr= 0.000000 dB    Average Loss: 0.000469    Average PSNR: 30.46957355 dB
+===> Epoch 66 starts:    lr= 0.000000 dB    Average Loss: 0.000469    Average PSNR: 30.47522036 dB
+===> Epoch 67 starts:    lr= 0.000000 dB    Average Loss: 0.000468    Average PSNR: 30.48074249 dB
+===> Epoch 68 starts:    lr= 0.000000 dB    Average Loss: 0.000468    Average PSNR: 30.48666740 dB
+===> Epoch 69 starts:    lr= 0.000000 dB    Average Loss: 0.000467    Average PSNR: 30.49217770 dB
+===> Epoch 70 starts:    lr= 0.000000 dB    Average Loss: 0.000466    Average PSNR: 30.49803655 dB
+===> Epoch 71 starts:    lr= 0.000000 dB    Average Loss: 0.000466    Average PSNR: 30.50343310 dB
+===> Epoch 72 starts:    lr= 0.000000 dB    Average Loss: 0.000465    Average PSNR: 30.50916887 dB
+===> Epoch 73 starts:    lr= 0.000000 dB    Average Loss: 0.000465    Average PSNR: 30.51461856 dB
+===> Epoch 74 starts:    lr= 0.000000 dB    Average Loss: 0.000464    Average PSNR: 30.52000283 dB
+===> Epoch 75 starts:    lr= 0.000000 dB    Average Loss: 0.000464    Average PSNR: 30.52544499 dB
+===> Epoch 76 starts:    lr= 0.000000 dB    Average Loss: 0.000463    Average PSNR: 30.53080111 dB
+===> Epoch 77 starts:    lr= 0.000000 dB    Average Loss: 0.000463    Average PSNR: 30.53625378 dB
+===> Epoch 78 starts:    lr= 0.000000 dB    Average Loss: 0.000462    Average PSNR: 30.54164630 dB
+===> Epoch 79 starts:    lr= 0.000000 dB    Average Loss: 0.000462    Average PSNR: 30.54703259 dB
+===> Epoch 80 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55226089 dBCheckpoint saved to ./model_save/80/model_path.pth
+
+===> Epoch 81 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55295195 dB
+===> Epoch 82 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55351815 dB
+===> Epoch 83 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55405770 dB
+===> Epoch 84 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55459797 dB
+===> Epoch 85 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55520640 dB
+===> Epoch 86 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55567549 dB
+===> Epoch 87 starts:    lr= 0.000000 dB    Average Loss: 0.000461    Average PSNR: 30.55636004 dB
+===> Epoch 88 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55695713 dB
+===> Epoch 89 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55746525 dB
+===> Epoch 90 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55808708 dB
+===> Epoch 91 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55858181 dB
+===> Epoch 92 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55921277 dB
+===> Epoch 93 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.55982524 dB
+===> Epoch 94 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56037091 dB
+===> Epoch 95 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56093274 dB
+===> Epoch 96 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56155137 dB
+===> Epoch 97 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56203754 dB
+===> Epoch 98 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56269839 dB
+===> Epoch 99 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56316255 dB
+===> Epoch 100 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56379441 dBCheckpoint saved to ./model_save/100/model_path.pth
+
+===> Epoch 101 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56438697 dB
+===> Epoch 102 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56498417 dB
+===> Epoch 103 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56551346 dB
+===> Epoch 104 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56612465 dB
+===> Epoch 105 starts:    lr= 0.000000 dB    Average Loss: 0.000460    Average PSNR: 30.56669523 dB
+===> Epoch 106 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.56720474 dB
+===> Epoch 107 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.56780527 dB
+===> Epoch 108 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.56842134 dB
+===> Epoch 109 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.56891548 dB
+===> Epoch 110 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.56952063 dB
+===> Epoch 111 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57006217 dB
+===> Epoch 112 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57059825 dB
+===> Epoch 113 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57118563 dB
+===> Epoch 114 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57174684 dB
+===> Epoch 115 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57231271 dB
+===> Epoch 116 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57289821 dB
+===> Epoch 117 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57347393 dB
+===> Epoch 118 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57398749 dB
+===> Epoch 119 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57457831 dB
+===> Epoch 120 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57506428 dBCheckpoint saved to ./model_save/120/model_path.pth
+
+===> Epoch 121 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57515952 dB
+===> Epoch 122 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57518058 dB
+===> Epoch 123 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57521361 dB
+===> Epoch 124 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57524724 dB
+===> Epoch 125 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57526035 dB
+===> Epoch 126 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57528907 dB
+===> Epoch 127 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57531863 dB
+===> Epoch 128 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57535405 dB
+===> Epoch 129 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57536957 dB
+===> Epoch 130 starts:    lr= 0.000000 dB    Average Loss: 0.000459    Average PSNR: 30.57539005 dB
+===> Epoch 131 starts:^C    lr= 0.000000 dBTraceback (most recent call last):
+  File "main.py", line 90, in <module>
+    main()
+  File "main.py", line 83, in main
+    model.run()
+  File "/home/lzh412/桌面/CNN_Net (复件)/VRCNN/solver.py", line 98, in run
+    self.train()
+
