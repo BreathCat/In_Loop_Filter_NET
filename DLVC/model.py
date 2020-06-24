@@ -3,20 +3,32 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class ResidualBlock(nn.Module):
-    def __init__(self, stride=1):
+    def __init__(self, nChannels):
         super(ResidualBlock, self).__init__()
-        self.conv = nn.Sequential(
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=stride, padding=1, bias=True),
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(in_channels=nChannels, out_channels=128, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.BatchNorm2d(128),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             nn.BatchNorm2d(64),
             nn.ReLU(inplace=True),
+            
+        )
+
+        self.conv2 = nn.Sequential(            
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             nn.BatchNorm2d(64)
         )
         self.shortcut = nn.Sequential()
 
     def forward(self, x):
-        out = self.conv(x)
-        out += self.shortcut(x)
+        out1 = self.conv1(x) #/64 channel 输入
+        out = self.conv2(out1)
+        out = out + out1 
+        #print (out.size())
+        #print('\n')
+        #print(x.size())
+        out = torch.cat((x, out), 1)
         out = F.relu(out)
         return out
 
@@ -29,31 +41,41 @@ class Net(nn.Module):
             nn.BatchNorm2d(64),
             nn.ReLU(),
         )
-        self.layer1 = self.make_layer(ResidualBlock,  num_blocks=16, stride=1)
+
+        layerNum = 16
+        self.layer1 = self.make_layer(ResidualBlock,  num_blocks = layerNum, stride=1)
         # self.layer2 = self.make_layer(ResidualBlock, 128, 2, stride=2)
         # self.layer3 = self.make_layer(ResidualBlock, 256, 2, stride=2)
         # self.layer4 = self.make_layer(ResidualBlock, 512, 2, stride=2)
+
         self.conv2 = nn.Sequential(
-            nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
+            nn.Conv2d(in_channels=64*(layerNum+1), out_channels=128, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+        )
+
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(in_channels=128, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
             nn.BatchNorm2d(1),
             nn.ReLU(),
         )
 
         self.shortcut = nn.Sequential()
 
-    def make_layer(self, block, num_blocks, stride):
-        strides = [stride] + [1] * (num_blocks - 1)   #strides=[1,1]
+    def make_layer(self, block, num_blocks, stride): # LZH modify this layer
+        #strides = [stride] + [1] * (num_blocks - 1)   #strides=[1,1]
         layers = []
-        for stride in strides:
-            layers.append(block(stride))
+        for stride in range(num_blocks):
+            layers.append(block(nChannels = (stride+1)*64))
 
         return nn.Sequential(*layers)
 
     def forward(self, x):
         out = self.conv1(x)
-        out = self.layer1(out)
+        out = self.layer1(out) 
         out = self.conv2(out)
-        out += self.shortcut(x)
+        out = self.conv3(out)
+        #out += self.shortcut(x)
         out = F.relu(out)
         return out
 
