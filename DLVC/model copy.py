@@ -86,8 +86,8 @@ class Net(nn.Module):
         #strides = [stride] + [1] * (num_blocks - 1)   #strides=[1,1]
         layers = []
         for stride in range(num_blocks):
-            layers.append(block(nChannels = in_channels))
-            in_channels=in_channels+64
+            layers.append(block(nChannels = in_channels)
+            in_channels += 64
 
         return nn.Sequential(*layers)
     
