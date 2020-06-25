@@ -2,7 +2,6 @@ test_model/
 test_model_Class_ABCDE/
 model_save/
 __pycache__
-dataset/
-dataset_original/
+/dataset/Images_for_train/
 *.pth
 *.bmp
