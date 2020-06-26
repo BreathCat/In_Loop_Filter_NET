@@ -1,0 +1,3 @@
+/home/li/Desktop/LZH/CNN_NET/build/CMakeFiles/edit_cache.dir
+/home/li/Desktop/LZH/CNN_NET/build/CMakeFiles/rebuild_cache.dir
+/home/li/Desktop/LZH/CNN_NET/build/CMakeFiles/example-app.dir
