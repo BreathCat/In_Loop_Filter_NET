@@ -160,7 +160,6 @@ for(int i=0;i<3;i++)//控制对YUV三通道的滤波
   const char* out_bmp_name=NULL;
   char ch[2]={0};
   //itoa(int(compID),ch,10);//int转char数组
-  int ch_length=sprintf(ch,"%d",i);
   string src1_in="lowinput_";
   string src1_out="highoutput_";
   string src2=ch;
@@ -180,7 +179,7 @@ for(int i=0;i<3;i++)//控制对YUV三通道的滤波
 	torch::jit::script::Module module;
 	try {
 		// Deserialize the ScriptModule from a file using torch::jit::load().
-		module = torch::jit::load("/home/li/Desktop/LZH/HM-16.15-4995-jiabeizhu/HEVC_CNN/160_model.pt");
+		module = torch::jit::load("/home/li/Desktop/LZH/HM-16.15-4995-jiabeizhu/HEVC_CNN/160epoch_dense_DLVC_QP=37_model2_4block.pt");
 	   }
 	   catch (const c10::Error& e) {
 		std::cerr << "error loading the model\n";

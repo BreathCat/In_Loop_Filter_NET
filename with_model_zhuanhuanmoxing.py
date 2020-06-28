@@ -5,8 +5,12 @@ import torchvision
 
 #UPSCALE_FACTOR = 1
 #model = Generator(UPSCALE_FACTOR)
-modelname = '160epoch_dense_DLVC_QP=37_model2_4block'
-model=torch.load(modelname+'.pth', map_location=lambda storage, loc: storage)
+parser = argparse.ArgumentParser()
+parser.add_argument('-name', type=str, default=64,help="model name without '.pth")
+args = parser.parse_args()
+
+modelname = 'DLVC_epoch160'
+model=torch.load(arg.name+'.pth', map_location=lambda storage, loc: storage)
 #model.eval()
 print('model:',model)
 
@@ -16,4 +20,4 @@ example = torch.rand(1, 1, 33, 33)
 # Use torch.jit.trace to generate a torch.jit.ScriptModule via tracing.
 traced_script_module = torch.jit.trace(model, example)
 
-traced_script_module.save(modelname+".pt")
+traced_script_module.save(arg.name+".pt")
