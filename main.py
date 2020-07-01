@@ -1,11 +1,14 @@
 # coding=utf-8
 from __future__ import print_function
+import sys
+
 
 import argparse
 
 from torch.utils.data import DataLoader
 
 from VRCNN.solver import VRCNNTrainer
+from DenseNet.solver import DENSETrainer
 from VRCNN_no_res.solver import VRCNN_no_resTrainer
 from VRCNN_ext.solver import VRCNN_extTrainer
 from DLVC.solver import DLVCTrainer
@@ -34,13 +37,31 @@ parser.add_argument('--lr', type=float, default=0.0001, help='Learning Rate. Def
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 
 # model configuration
-parser.add_argument('--upscale_factor', '-uf',  type=int, default=4, help="super resolution upscale factor")
+parser.add_argument('--upscale_factor', '-uf',  type=int, default=1, help="super resolution upscale factor")
 parser.add_argument('--model', '-m', type=str, default='DLVC', help='choose which model is going to use')
 
 args = parser.parse_args()
 
 
 def main():
+
+    class Logger(object):  # redirect std output
+        def __init__(self, filename='default.log', stream=sys.stdout):
+	        self.terminal = stream
+	        self.log = open(filename, 'a+')
+
+        def write(self, message):
+	        self.terminal.write(message)
+	        self.log.write(message)
+
+        def flush(self):
+	        pass
+
+    sys.stdout = Logger("train_result.log", sys.stdout)
+    #sys.stderr = Logger(train.log_file, sys.stderr)		# redirect std err, if necessary
+
+    # now it works
+    print("main start")
     # ===========================================================
     # Set train dataset & test dataset
     # ===========================================================
@@ -76,6 +97,8 @@ def main():
         model = VRCNN_extTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'DLVC':
         model = DLVCTrainer(args, training_data_loader, testing_data_loader)
+    elif args.model == 'DENSE':
+        model = DENSETrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'VRCNN_ext_1conv':
         model = VRCNN_ext_1convTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'Multiresolution_CNN':

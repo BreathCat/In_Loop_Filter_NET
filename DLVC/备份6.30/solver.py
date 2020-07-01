@@ -5,37 +5,40 @@ from os.path import exists, join, basename
 import torch
 import torch.backends.cudnn as cudnn
 
-import DenseNet.model as DENSE
-
-
+from DLVC.model import Net,ResidualBlock
 # from progress_bar import progress_bar
 
 
-# def get_parameters(model, bias=False):
-#     import torch.nn as nn
-#     # modules_skipped = (
-#     #     nn.ReLU,
-#     #     nn.Sequential,
-#     #
-#     # )
-#     for m in self.modules():
-#             if isinstance(m, nn.Conv2d):
-#                 n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
-#                 m.weight.data.normal_(0, math.sqrt(2. / n))
-#             elif isinstance(m, nn.BatchNorm2d):
-#                 m.weight.data.fill_(1)
-#                 m.bias.data.zero_()
-#             elif isinstance(m, nn.Linear):
-#                 m.bias.data.zero_()
+def get_parameters(model, bias=False):
+    import torch.nn as nn
+    # modules_skipped = (
+    #     nn.ReLU,
+    #     nn.Sequential,
+    #
+    # )
+    for m in model.modules():
+        # print(m)
 
-    
+        if isinstance(m, nn.Conv2d):
+            if bias:
+                yield m.bias
+            else:
+                yield m.weight
+        elif isinstance(m, nn.ConvTranspose2d):
+            # weight is frozen because it is just a bilinear upsampling
+            if bias:
+                assert m.bias is None
+        elif isinstance(m, nn.Conv2d)==False:
+            continue
+        else:
+            raise ValueError('Unexpected module: %s' % str(m))
 
 
 
 
-class DENSETrainer(object):
+class DLVCTrainer(object):
     def __init__(self, config, training_loader, testing_loader):
-        super(DENSETrainer, self).__init__()
+        super(DLVCTrainer, self).__init__()
         self.CUDA = torch.cuda.is_available()
         # self.CUDA = torch.cuda.set_device(1)
         self.device = torch.device('cuda:0' if self.CUDA else 'cpu')
@@ -51,10 +54,7 @@ class DENSETrainer(object):
         self.testing_loader = testing_loader
 
     def build_model(self):
-        self.model = DENSE.DenseNet(growthRate=12, depth=40, reduction=0.5,
-                            bottleneck=True, nClasses=10)
-        
-          
+        self.model = Net(ResidualBlock).to(self.device)
         # self.model = torch.nn.DataParallel(Net, device_ids=[0, 1])
         self.model.weight_init(mean=0.0, std=0.01)
         self.criterion = torch.nn.MSELoss()
@@ -64,12 +64,8 @@ class DENSETrainer(object):
             torch.cuda.manual_seed(self.seed)
             cudnn.benchmark = True
             self.criterion.cuda()
-            self.model.cuda()
 
-        # TODO 可能可以用原文的下面这个梯度下降函数
-        # self.optimizer = torch.optim.SGD(self.model.parameters(), lr=1e-1,betas=(0.9, 0.999), momentum=0.9, weight_decay=1e-4)
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr,betas=(0.9, 0.999), eps=1e-8,weight_decay=0.0001)
-    
         # self.optimizer = torch.optim.SGD(self.model.parameters(), lr=self.lr, momentum=0.9, weight_decay=0.0001)
         # self.optimizer = torch.optim.SGD([{'params': get_parameters(self.model, bias=False)},
         #                                   {'params': get_parameters(self.model, bias=True), 'lr': 0.01}],

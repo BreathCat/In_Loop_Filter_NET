@@ -146,8 +146,21 @@ void use_model(const char* in_filename,const char* out_filename,const char* in_b
   
 }
 
-int main(void) {
- 
+int main(int argc, char *argv[]) {
+
+ if( argc == 3 ) //建立新文件夹，防止网络输出错乱
+   {
+      printf("The model and outputname is %s and %s\n", argv[1], argv[2]);
+      
+   }
+   else if( argc > 3 )
+   {
+      printf("Too many arguments supplied.\n");
+   }
+   else
+   {
+      printf("Two argument expected.\n");
+   }
    
 for(int i=0;i<3;i++)//控制对YUV三通道的滤波
 {
@@ -158,28 +171,34 @@ for(int i=0;i<3;i++)//控制对YUV三通道的滤波
   const char* out_filename=NULL;
   const char* in_bmp_name=NULL;
   const char* out_bmp_name=NULL;
-  char ch[2]={0};
+  char ch[2]= {0};
   //itoa(int(compID),ch,10);//int转char数组
+  //int ch_length=sprintf(ch,"%d",i);
+  sprintf(ch,"%d",i);
+
+  string dirpath=argv[2];
   string src1_in="lowinput_";
   string src1_out="highoutput_";
   string src2=ch;
   string src3=".txt";
   string src3_bmp=".bmp";
 
-  string in_channel_name=src1_in+src2+src3;
+  string in_channel_name=dirpath+"/"+src1_in+src2+src3;
   in_filename=in_channel_name.c_str();
-  string out_channel_name=src1_out+src2+src3;
+  string out_channel_name=dirpath+"/"+src1_out+src2+src3;
   out_filename=out_channel_name.c_str();
 
-  string in_bmp_channel_name=src1_in+src2+src3_bmp;
+  string in_bmp_channel_name=dirpath+"/"+src1_in+src2+src3_bmp;
   in_bmp_name=in_bmp_channel_name.c_str();
-  string out_bmp_channel_name=src1_out+src2+src3_bmp;
+  string out_bmp_channel_name=dirpath+"/"+src1_out+src2+src3_bmp;
   out_bmp_name=out_bmp_channel_name.c_str();
 
 	torch::jit::script::Module module;
 	try {
 		// Deserialize the ScriptModule from a file using torch::jit::load().
-		module = torch::jit::load("/home/li/Desktop/LZH/HM-16.15-4995-jiabeizhu/HEVC_CNN/160epoch_dense_DLVC_QP=37_model2_4block.pt");
+    char modelname[100];
+    sprintf(modelname,"/home/li/Desktop/LZH/CNN_NET/%s.pt",argv[1]);
+		module = torch::jit::load(modelname);
 	   }
 	   catch (const c10::Error& e) {
 		std::cerr << "error loading the model\n";
@@ -187,7 +206,7 @@ for(int i=0;i<3;i++)//控制对YUV三通道的滤波
 	  }  
 	  
 
-	  
+	  printf("infile and outfile is %s %s",in_filename,out_filename);
 		use_model(in_filename,out_filename,in_bmp_name,out_bmp_name,module);
 		std::cout << "ok\n";
 	}

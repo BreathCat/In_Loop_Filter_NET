@@ -53,7 +53,7 @@ class Net(nn.Module):
         out = self.conv1(x)
         out = self.layer1(out)
         out = self.conv2(out)
-        # out += self.shortcut(x)
+        out += self.shortcut(x)
         out = F.relu(out)
         return out
 

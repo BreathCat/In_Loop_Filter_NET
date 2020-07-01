@@ -60,12 +60,15 @@ class Transition(nn.Module):
 class Conv(nn.Module):
     def __init__(self, nChannels, nOutChannels):
         super(Conv, self).__init__()
-        self.bn1 = nn.BatchNorm2d(nChannels)
-        self.conv1 = nn.Conv2d(nChannels, nOutChannels, kernel_size=3,
-                                padding=1, bias=False)
+        self.conv1 = nn.Sequential(
+            nn.BatchNorm2d(nChannels),
+            nn.Conv2d(nChannels, nOutChannels, kernel_size=3,
+                padding=1, bias=False),
+            nn.ReLU(),
+        )
 
     def forward(self, x):
-        out = self.conv1(F.relu(self.bn1(x)))
+        out = self.conv1(x)
         return out
 
 class DenseNet(nn.Module):
@@ -77,8 +80,9 @@ class DenseNet(nn.Module):
             nDenseBlocks //= 2  #6
 
         nChannels = 2*growthRate #24
-        self.conv1 = nn.Conv2d(3, nChannels, kernel_size=3, padding=1,
+        self.conv1 = nn.Conv2d(1, nChannels, kernel_size=3, padding=1,
                                bias=False)
+        
         self.dense1 = self._make_dense(nChannels, growthRate, nDenseBlocks, bottleneck)
         nChannels += nDenseBlocks*growthRate
         nOutChannels = int(math.floor(nChannels*reduction))
