@@ -369,3 +369,621 @@ Epoch 157 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000648    Average
 Epoch 158 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000716    Average PSNR: 32.89061529 dB
 Epoch 159 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000648    Average test_Loss: 0.000716    Average PSNR: 32.89059662 dB
 Epoch 160 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000716    Average PSNR: 32.89060450 dBCheckpoint saved to ./model_save/160/model_path.pth
+main start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+
+Epoch 1 starts: lr= 0.0010000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+main start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dBmain start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+DLVC正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dB    Average train_Loss: 0.030607    Average test_Loss: 0.001309    Average PSNR: 30.74233080 dB
+Epoch 2 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000982    Average test_Loss: 0.000805    Average PSNR: 32.48947850 dB
+Epoch 3 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000686    Average test_Loss: 0.000854    Average PSNR: 32.07402528 dB
+Epoch 4 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000662    Average test_Loss: 0.000725    Average PSNR: 32.82861883 dB
+Epoch 5 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000656    Average test_Loss: 0.000858    Average PSNR: 31.69333585 dB
+Epoch 6 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000656    Average test_Loss: 0.000716    Average PSNR: 32.89012252 dB
+Epoch 7 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000668    Average test_Loss: 0.000754    Average PSNR: 32.53780612 dB
+Epoch 8 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000645    Average test_Loss: 0.000727    Average PSNR: 32.75244383 dB
+Epoch 9 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000715    Average PSNR: 32.89394365 dB
+Epoch 10 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000664    Average test_Loss: 0.000719    Average PSNR: 32.86989904 dB
+Epoch 11 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000646    Average test_Loss: 0.000784    Average PSNR: 32.16797647 dB
+Epoch 12 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000648    Average test_Loss: 0.000717    Average PSNR: 32.88100791 dB
+Epoch 13 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000716    Average PSNR: 32.88826371 dB
+Epoch 14 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000652    Average test_Loss: 0.000717    Average PSNR: 32.87909318 dB
+Epoch 15 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000716    Average PSNR: 32.88159119 dB
+Epoch 16 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000721    Average PSNR: 32.86110893 dB
+Epoch 17 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000652    Average test_Loss: 0.000720    Average PSNR: 32.87163875 dB
+Epoch 18 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000725    Average PSNR: 32.84116506 dB
+Epoch 19 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000650    Average test_Loss: 0.000720    Average PSNR: 32.87184397 dB
+Epoch 20 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000718    Average PSNR: 32.88236729 dBCheckpoint saved to ./model_save/20/model_path.pth
+
+Epoch 21 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000648    Average test_Loss: 0.000717    Average PSNR: 32.88542241 dB
+Epoch 22 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000650    Average test_Loss: 0.000717    Average PSNR: 32.88743544 dB
+Epoch 23 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000721    Average PSNR: 32.86328190 dB
+Epoch 24 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000717    Average PSNR: 32.88578600 dB
+Epoch 25 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000650    Average test_Loss: 0.000721    Average PSNR: 32.86619065 dB
+Epoch 26 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000717    Average PSNR: 32.88612779 dB
+Epoch 27 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000653    Average test_Loss: 0.000717    Average PSNR: 32.88570222 dB
+Epoch 28 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000648    Average test_Loss: 0.000718    Average PSNR: 32.87949555 dB
+Epoch 29 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000720    Average PSNR: 32.87112002 dB
+Epoch 30 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000656    Average test_Loss: 0.000718    Average PSNR: 32.88097490 dB
+Epoch 31 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000717    Average PSNR: 32.88951148 dB
+Epoch 32 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000649    Average test_Loss: 0.000716    Average PSNR: 32.89027794 dB
+Epoch 33 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000657    Average test_Loss: 0.000717    Average PSNR: 32.88047108 dB
+Epoch 34 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000650    Average test_Loss: 0.000716    Average PSNR: 32.88991346 dB
+Epoch 35 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000648    Average test_Loss: 0.000717    Average PSNR: 32.87952275 dB
+Epoch 36 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000646    Average test_Loss: 0.000716    Average PSNR: 32.88650396 dB
+Epoch 37 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000716    Average PSNR: 32.89120583 dB
+Epoch 38 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000723    Average PSNR: 32.81860539 dB
+Epoch 39 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000647    Average test_Loss: 0.000716    Average PSNR: 32.89335604 dB
+Epoch 40 starts: lr= 0.0001000000 dB    Average train_Loss: 0.000646    Average test_Loss: 0.000716    Average PSNR: 32.87279837 dBCheckpoint saved to ./model_save/40/model_path.pth
+
+Epoch 41 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000645    Average test_Loss: 0.000715    Average PSNR: 32.89028492 dB
+Epoch 42 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000715    Average PSNR: 32.89624000 dB
+Epoch 43 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000731    Average PSNR: 32.79454897 dB
+Epoch 44 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000715    Average PSNR: 32.89643480 dB
+Epoch 45 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000718    Average PSNR: 32.85973259 dB
+Epoch 46 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000717    Average PSNR: 32.87527913 dB
+Epoch 47 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000716    Average PSNR: 32.88638067 dB
+Epoch 48 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000728    Average PSNR: 32.77726069 dB
+Epoch 49 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000717    Average PSNR: 32.87941221 dB
+Epoch 50 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000715    Average PSNR: 32.89053954 dB
+Epoch 51 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000644    Average test_Loss: 0.000715    Average PSNR: 32.89069769 dB
+Epoch 52 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88638725 dB
+Epoch 53 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000716    Average PSNR: 32.88691818 dB
+Epoch 54 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88545453 dB
+Epoch 55 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88855753 dB
+Epoch 56 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.87910239 dB
+Epoch 57 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.89107782 dB
+Epoch 58 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89218190 dB
+Epoch 59 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89048323 dB
+Epoch 60 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000713    Average PSNR: 32.89715418 dBCheckpoint saved to ./model_save/60/model_path.pth
+
+Epoch 61 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000716    Average PSNR: 32.88095577 dB
+Epoch 62 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88509469 dB
+Epoch 63 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000972    Average PSNR: 31.32620253 dB
+Epoch 64 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89367234 dB
+Epoch 65 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88727845 dB
+Epoch 66 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88819799 dB
+Epoch 67 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88371032 dB
+Epoch 68 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.89283165 dB
+Epoch 69 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88539033 dB
+Epoch 70 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88945815 dB
+Epoch 71 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88490553 dB
+Epoch 72 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89459359 dB
+Epoch 73 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000738    Average PSNR: 32.66065933 dB
+Epoch 74 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.88681149 dB
+Epoch 75 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88822249 dB
+Epoch 76 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89282607 dB
+Epoch 77 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.89208236 dB
+Epoch 78 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000714    Average PSNR: 32.88894140 dB
+Epoch 79 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000711    Average PSNR: 32.90712574 dB
+Epoch 80 starts: lr= 0.0000100000 dB    Average train_Loss: 0.000643    Average test_Loss: 0.000715    Average PSNR: 32.88761622 dBCheckpoint saved to ./model_save/80/model_path.pth
+
+Epoch 81 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88439641 dB
+Epoch 82 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88795112 dB
+Epoch 83 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88471010 dB
+Epoch 84 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88728534 dB
+Epoch 85 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88360004 dB
+Epoch 86 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88631936 dB
+Epoch 87 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88290740 dB
+Epoch 88 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88848505 dB
+Epoch 89 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88525828 dB
+Epoch 90 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87624731 dB
+Epoch 91 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000717    Average PSNR: 32.87063739 dB
+Epoch 92 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88252573 dB
+Epoch 93 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88384644 dB
+Epoch 94 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88372766 dB
+Epoch 95 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88651087 dB
+Epoch 96 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88687525 dB
+Epoch 97 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87875904 dB
+Epoch 98 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87931731 dB
+Epoch 99 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87575069 dB
+Epoch 100 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88849883 dBCheckpoint saved to ./model_save/100/model_path.pth
+
+Epoch 101 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88378505 dB
+Epoch 102 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87889894 dB
+Epoch 103 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87672200 dB
+Epoch 104 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88713104 dB
+Epoch 105 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87712913 dB
+Epoch 106 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88116317 dB
+Epoch 107 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88160876 dB
+Epoch 108 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87456527 dB
+Epoch 109 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88138920 dB
+Epoch 110 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88025324 dB
+Epoch 111 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.88018750 dB
+Epoch 112 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88182464 dB
+Epoch 113 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87599703 dB
+Epoch 114 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88309959 dB
+Epoch 115 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87643035 dB
+Epoch 116 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88368746 dB
+Epoch 117 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87442830 dB
+Epoch 118 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000718    Average PSNR: 32.86396144 dB
+Epoch 119 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88546693 dB
+Epoch 120 starts: lr= 0.0000010000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87406840 dBCheckpoint saved to ./model_save/120/model_path.pth
+
+Epoch 121 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88248904 dB
+Epoch 122 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88143696 dB
+Epoch 123 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88277656 dB
+Epoch 124 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88173193 dB
+Epoch 125 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88318925 dB
+Epoch 126 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000714    Average PSNR: 32.88427423 dB
+Epoch 127 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88190900 dB
+Epoch 128 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88176148 dB
+Epoch 129 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87787352 dB
+Epoch 130 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88264396 dB
+Epoch 131 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88074247 dB
+Epoch 132 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87963057 dB
+Epoch 133 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88146403 dB
+Epoch 134 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87683834 dB
+Epoch 135 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87999477 dB
+Epoch 136 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87704003 dB
+Epoch 137 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87727460 dB
+Epoch 138 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87930088 dB
+Epoch 139 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88100747 dB
+Epoch 140 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88179831 dBCheckpoint saved to ./model_save/140/model_path.pth
+
+Epoch 141 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88100010 dB
+Epoch 142 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87669774 dB
+Epoch 143 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87728726 dB
+Epoch 144 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88073725 dB
+Epoch 145 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87946976 dB
+Epoch 146 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87637136 dB
+Epoch 147 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87976829 dB
+Epoch 148 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87837021 dB
+Epoch 149 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000716    Average PSNR: 32.87656955 dB
+Epoch 150 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88081975 dB
+Epoch 151 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88153293 dB
+Epoch 152 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87917285 dB
+Epoch 153 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88090242 dB
+Epoch 154 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88115349 dB
+Epoch 155 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88000589 dB
+Epoch 156 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88068084 dB
+Epoch 157 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88110025 dB
+Epoch 158 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87816167 dB
+Epoch 159 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.87910839 dB
+Epoch 160 starts: lr= 0.0000001000 dB    Average train_Loss: 0.000642    Average test_Loss: 0.000715    Average PSNR: 32.88379007 dBCheckpoint saved to ./model_save/160/model_path.pth
+main start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+main start
+imgs.size(): torch.Size([64, 1, 35, 35])
+labels.size(): torch.Size([64, 1, 35, 35])
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+DLVC6正在初始化权重
+
+Epoch 1 starts: lr= 0.0001000000 dB

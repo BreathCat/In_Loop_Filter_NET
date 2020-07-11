@@ -164,7 +164,7 @@ int main(int argc, char *argv[]) {
    
 for(int i=0;i<3;i++)//控制对YUV三通道的滤波
 {
-  cout<<"/////////////// ";
+//   cout<<"/////////////// ";
     
   //输出YUV三通道像素txt,字符串拼接
   const char* in_filename=NULL;
@@ -208,7 +208,7 @@ for(int i=0;i<3;i++)//控制对YUV三通道的滤波
 
 	  printf("infile and outfile is %s %s",in_filename,out_filename);
 		use_model(in_filename,out_filename,in_bmp_name,out_bmp_name,module);
-		std::cout << "ok\n";
+		std::cout << " ok\n";
 	}
     return 0;
 

@@ -5,7 +5,7 @@ from os.path import exists, join, basename
 import torch
 import torch.backends.cudnn as cudnn
 
-from DLVC_DENSE_2.model import Net,ResidualBlock
+from DLVC_DENSE_6.model import Net,ResidualBlock,ResidualBlock_0
 # from progress_bar import progress_bar
 
 
@@ -36,9 +36,9 @@ def get_parameters(model, bias=False):
 
 
 
-class DLVCTrainer(object):
+class DLVCTrainer6(object):
     def __init__(self, config, training_loader, testing_loader):
-        super(DLVCTrainer, self).__init__()
+        super(DLVCTrainer6, self).__init__()
         self.CUDA = torch.cuda.is_available()
         # self.CUDA = torch.cuda.set_device(1)
         self.device = torch.device('cuda:0' if self.CUDA else 'cpu')
@@ -54,7 +54,7 @@ class DLVCTrainer(object):
         self.testing_loader = testing_loader
 
     def build_model(self):
-        self.model = Net(ResidualBlock).to(self.device)
+        self.model = Net(ResidualBlock,ResidualBlock_0).to(self.device)
         # self.model = torch.nn.DataParallel(Net, device_ids=[0, 1])
         self.model.weight_init(mean=0.0, std=0.01)
         self.criterion = torch.nn.MSELoss()
@@ -79,7 +79,7 @@ class DLVCTrainer(object):
 
     def save_model(self):
         root_dir='./model_save'
-        model_out_path = "model_path.pth"
+        model_out_path = "model_6.pth"
         model_out_path = join(root_dir, epo_ch,model_out_path)
         torch.save(self.model, model_out_path)
         print("Checkpoint saved to {}".format(model_out_path))

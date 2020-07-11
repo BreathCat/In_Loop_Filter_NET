@@ -138,7 +138,7 @@ class DenseNet(nn.Module):
         out = self.conv2(out)
         out = self.conv3(out)
         out = self.bn1(out)
-        out += self.shortcut(x)
+        #out += self.shortcut(x)
         out = F.relu(out)
         #out = F.log_softmax(self.fc(out))
         return out

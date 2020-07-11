@@ -12,6 +12,8 @@ from DenseNet.solver import DENSETrainer
 from VRCNN_no_res.solver import VRCNN_no_resTrainer
 from VRCNN_ext.solver import VRCNN_extTrainer
 from DLVC.solver import DLVCTrainer
+from DLVC5.solver import DLVC5Trainer
+from DLVC_DENSE_6.solver import DLVCTrainer6
 from VRCNN_ext_1conv.solver import VRCNN_ext_1convTrainer
 from Multiresolution_CNN.solver import Multiresolution_CNNTrainer
 from VRCNN_1conv.solver import VRCNN_1convTrainer
@@ -97,6 +99,10 @@ def main():
         model = VRCNN_extTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'DLVC':
         model = DLVCTrainer(args, training_data_loader, testing_data_loader)
+    elif args.model == 'DLVC_5':
+        model = DLVC5Trainer(args, training_data_loader, testing_data_loader)
+    elif args.model == 'DLVC_6':
+        model = DLVCTrainer6(args, training_data_loader, testing_data_loader)
     elif args.model == 'DENSE':
         model = DENSETrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'VRCNN_ext_1conv':
