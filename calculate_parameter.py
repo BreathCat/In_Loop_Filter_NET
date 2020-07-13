@@ -5,38 +5,48 @@ import torchsummary
 from torch.nn import init
 import torch.nn.functional as F
 
-
 class ResidualBlock(nn.Module):
-    def __init__(self, nChannels):
+    def __init__(self,):
         super(ResidualBlock, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(in_channels=nChannels, out_channels=128, kernel_size=1, stride=1, padding=0, bias=True),
-            nn.BatchNorm2d(128),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(in_channels=128, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+            #nn.BatchNorm2d(64),
+            nn.LeakyReLU(inplace=True),
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+            #nn.BatchNorm2d(64)
         )
 
-        self.conv2 = nn.Sequential(            
+        self.conv2 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
+            #nn.BatchNorm2d(64),
+            nn.LeakyReLU(inplace=True),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64)
+            #nn.BatchNorm2d(64)
         )
-        self.shortcut = nn.Sequential()
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+            #nn.BatchNorm2d(64),
+            nn.LeakyReLU(inplace=True),
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+            #nn.BatchNorm2d(64)
+        )
 
+        self.conv4 = nn.Sequential(
+            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+           
+        )
     def forward(self, x):
-        out1 = self.conv1(x) #/64 channel 输入
-        out = self.conv2(out1)
-        out = out + out1 
-        #print (out.size())
-        #print('\n')
-        #print(x.size())
-        out = torch.cat((x, out), 1)
-        out = F.relu(out, inplace=True)
+        out1 = self.conv1(x)
+        out = out1 + x
+        out2 = self.conv2(out)
+        out = out2 + x
+        out3 = self.conv3(out)
+        out = out3 + x
+        out = torch.cat((out, out1), 1)
+        out = torch.cat((out, out2), 1)
+        out = torch.cat((out, out3), 1)
+        out = self.conv4(out)
+        out += x
         return out
 
 class Net(nn.Module):
@@ -45,70 +55,34 @@ class Net(nn.Module):
 
         self.conv1 = nn.Sequential(
             nn.Conv2d(in_channels=1, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
+            #nn.BatchNorm2d(64),
+            nn.ReLU(),
         )
-
-        
-        self.layer1 = self.make_layer(ResidualBlock,  num_blocks = 3, in_channels=64)
+        self.layer1 = self.make_layer(ResidualBlock,  num_blocks=6)
+       
         self.conv2 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer2 = self.make_layer(ResidualBlock,  num_blocks = 3, in_channels=64)
-        self.conv3 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer3 = self.make_layer(ResidualBlock,  num_blocks = 3, in_channels=64)
-        self.conv4 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer4 = self.make_layer(ResidualBlock,  num_blocks = 3, in_channels=64)
-        self.conv5 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.conv6 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(1),
-            nn.ReLU(inplace=True),
+            #nn.BatchNorm2d(1),
+            nn.ReLU(),
         )
 
         self.shortcut = nn.Sequential()
 
-    def make_layer(self, block, num_blocks,in_channels): # LZH modify this layer
-        #strides = [stride] + [1] * (num_blocks - 1)   #strides=[1,1]
+    def make_layer(self, res_block, num_blocks):
+        num_blocks = [1] + [1] * (num_blocks - 1)   #strides=[1,1]
         layers = []
-        for stride in range(num_blocks):
-            layers.append(block(nChannels = in_channels))
-            in_channels=in_channels+64
+        for countnumber in num_blocks:
+            layers.append(res_block())
 
         return nn.Sequential(*layers)
-    
-    
+
+   
     def forward(self, x):
         out = self.conv1(x)
-        out = self.layer1(out) 
+        out = self.layer1(out)
         out = self.conv2(out)
-        out = self.layer2(out) 
-        out = self.conv3(out)
-        out = self.layer3(out) 
-        out = self.conv4(out)
-        out = self.layer4(out) 
-        out = self.conv5(out)
-        out = self.conv6(out)
-        #out += self.shortcut(x)
-        #out = F.relu(out)
+        # out += self.shortcut(x)
+        out = F.relu(out)
         return out
 
     def weight_init(self, mean, std):
@@ -122,21 +96,37 @@ class Net(nn.Module):
 
 
 
+
+
+
+def normal_init(m, mean, std):
+    if  isinstance(m, nn.Conv2d):
+        # m.weight.data.normal_(mean, std)
+        # m.init.xavier_uniform_(m.weight, gain=1)
+        # nn.init.xavier_uniform(m.weight)
+        # m.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
+        # m.bias.data.zero_()
+        print('Model7正在初始化权重')
+        # nn.init.xavier_uniform(m.weight)
+        # nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
+        torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
+        # torch.nn.init.normal_(m.weight, mean=0, std=1)
+        # m.bias.data.zero_()
 # class ResidualBlock(nn.Module):
 #     def __init__(self, stride=1):
 #         super(ResidualBlock, self).__init__()
 #         self.conv = nn.Sequential(
 #             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=stride, padding=1, bias=True),
-#             nn.BatchNorm2d(64),
+#             #nn.BatchNorm2d(64),
 #             nn.ReLU(inplace=True),
 #             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-#             nn.BatchNorm2d(64)
+#             #nn.BatchNorm2d(64)
 #         )
 #         self.shortcut = nn.Sequential()
 
 #     def forward(self, x):
 #         out = self.conv(x)
-#         out += self.shortcut(x)
+#         out += x
 #         out = F.relu(out)
 #         return out
 
@@ -146,7 +136,7 @@ class Net(nn.Module):
 
 #         self.conv1 = nn.Sequential(
 #             nn.Conv2d(in_channels=1, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-#             nn.BatchNorm2d(64),
+#             #nn.BatchNorm2d(64),
 #             nn.ReLU(),
 #         )
 #         self.layer1 = self.make_layer(ResidualBlock,  num_blocks=16, stride=1)
@@ -155,7 +145,7 @@ class Net(nn.Module):
 #         # self.layer4 = self.make_layer(ResidualBlock, 512, 2, stride=2)
 #         self.conv2 = nn.Sequential(
 #             nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
-#             nn.BatchNorm2d(1),
+#             #nn.BatchNorm2d(1),
 #             nn.ReLU(),
 #         )
 
@@ -187,133 +177,23 @@ class Net(nn.Module):
 #             normal_init(m, mean, std)
 
 
-class ResidualBlock(nn.Module):
-    def __init__(self, nChannels):
-        super(ResidualBlock, self).__init__()
-        self.conv1 = nn.Sequential(
-            nn.Conv2d(in_channels=nChannels, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.conv2 = nn.Sequential(            
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(64)
-        )
 
 
-    def forward(self, x):
-        out1 = self.conv1(x) #/64 channel 输入
-        out = self.conv2(out1)
-        out = out + out1 
-        out = torch.cat((x, out), 1)
-        out = F.relu(out, inplace=True)
-        return out
 
-class ResidualBlock_0(nn.Module):
-    def __init__(self, nChannels):
-        super(ResidualBlock_0, self).__init__()
 
-        self.conv = nn.Sequential(            
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(64)
-        )
-
-    def forward(self, x):
-        out = self.conv(x) 
-        out = torch.cat((x, out), 1)
-        out = F.relu(out, inplace=True)
-        return out
-
-class Net(nn.Module):
-    def __init__(self, ResidualBlock):
-        super(Net, self).__init__()
-
-        self.conv1 = nn.Sequential(
-            nn.Conv2d(in_channels=1, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        
-        self.layer1 = self.make_layer(ResidualBlock,ResidualBlock_0,  num_blocks = 3, in_channels=64)
-        self.conv2 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer2 = self.make_layer(ResidualBlock, ResidualBlock_0, num_blocks = 3, in_channels=64)
-        self.conv3 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer3 = self.make_layer(ResidualBlock, ResidualBlock_0,  num_blocks = 3, in_channels=64)
-        self.conv4 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.layer4 = self.make_layer(ResidualBlock, ResidualBlock_0,  num_blocks = 3, in_channels=64)
-        self.conv5 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
-            #nn.BatchNorm2d(64),
-            nn.ReLU(inplace=True),
-        )
-
-        self.conv6 = nn.Sequential(
-            nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
-            #nn.BatchNorm2d(1),
-            # nn.ReLU(inplace=True),
-        )
-
-        self.shortcut = nn.Sequential()
-
-    def make_layer(self, block,block_0, num_blocks,in_channels): # LZH modify this layer
-        #strides = [stride] + [1] * (num_blocks - 1)   #strides=[1,1]
-        layers = []
-        layers.append(block_0(nChannels = in_channels))
-        in_channels=in_channels+64
-
-        for stride in range(num_blocks-1):
-            layers.append(block(nChannels = in_channels))
-            in_channels=in_channels+64
-
-        return nn.Sequential(*layers)
-    
-    
-    def forward(self, x):
-        out = self.conv1(x)
-        out = self.layer1(out) 
-        out = self.conv2(out)
-        out = self.layer2(out) 
-        out = self.conv3(out)
-        out = self.layer3(out) 
-        out = self.conv4(out)
-        out = self.layer4(out) 
-        out = self.conv5(out)
-        out = self.conv6(out)
-        out += x
-        # out = F.relu(out)
-        return out
-
-    def weight_init(self, mean, std):
-        # for i in self.children():
-        #     print('i:',i)
-        # 访问 modules
-        for m in self.modules():
-
-            # print('m:',m)
-            normal_init(m, mean, std)
+# def normal_init(m, mean, std):
+#     if  isinstance(m, nn.Conv2d):
+#         # m.weight.data.normal_(mean, std)
+#         # m.init.xavier_uniform_(m.weight, gain=1)
+#         # nn.init.xavier_uniform(m.weight)
+#         # m.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
+#         # m.bias.data.zero_()
+#         print('DLVC正在初始化权重')
+#         # nn.init.xavier_uniform(m.weight)
+#         # nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
+#         torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
+#         # torch.nn.init.normal_(m.weight, mean=0, std=1)
+#         # m.bias.data.zero_()
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)

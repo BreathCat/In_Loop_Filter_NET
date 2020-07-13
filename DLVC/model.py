@@ -7,10 +7,10 @@ class ResidualBlock(nn.Module):
         super(ResidualBlock, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=stride, padding=1, bias=True),
-            nn.BatchNorm2d(64),
+            #nn.BatchNorm2d(64),
             nn.ReLU(inplace=True),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64)
+            #nn.BatchNorm2d(64)
         )
         self.shortcut = nn.Sequential()
 
@@ -26,7 +26,7 @@ class Net(nn.Module):
 
         self.conv1 = nn.Sequential(
             nn.Conv2d(in_channels=1, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
+            #nn.BatchNorm2d(64),
             nn.ReLU(),
         )
         self.layer1 = self.make_layer(ResidualBlock,  num_blocks=16, stride=1)
@@ -35,7 +35,7 @@ class Net(nn.Module):
         # self.layer4 = self.make_layer(ResidualBlock, 512, 2, stride=2)
         self.conv2 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(1),
+            #nn.BatchNorm2d(1),
             nn.ReLU(),
         )
 
