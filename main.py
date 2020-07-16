@@ -21,7 +21,7 @@ from VRCNN_1conv.solver import VRCNN_1convTrainer
 from Multiresolution_VRCNN.solver import Multiresolution_VRCNNTrainer
 from Multiresolution_DLVC.solver import Multiresolution_DLVCTrainer
 from SRGAN.solver import SRGANTrainer
-
+from FSRCNN.solver import FSRCNNTrainer
 
 
 
@@ -108,6 +108,8 @@ def main():
         model = DLVCTrainer_7(args, training_data_loader, testing_data_loader)
     elif args.model == 'DENSE':
         model = DENSETrainer(args, training_data_loader, testing_data_loader)
+    elif args.model == 'FSRCNN':
+        model = FSRCNNTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'VRCNN_ext_1conv':
         model = VRCNN_ext_1convTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'Multiresolution_CNN':

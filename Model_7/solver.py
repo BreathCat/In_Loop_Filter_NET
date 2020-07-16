@@ -112,9 +112,6 @@ class DLVCTrainer_7(object):
             for batch_num, (data, target) in enumerate(self.testing_loader):
                 data, target = data.to(self.device), target.to(self.device)
                 prediction = self.model(data)
-                # print('data:', data.shape)
-                # print('target:',target.shape)
-                # print('prediction:',prediction.shape)
                 mse = self.criterion(prediction, target)
                 test_loss += mse.item()
                 # print('mse type:',type(mse.item()))

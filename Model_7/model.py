@@ -8,7 +8,7 @@ class ResidualBlock(nn.Module):
         self.conv1 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64),
-            nn.LeakyReLU(inplace=True),
+            nn.ReLU(inplace=True),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64)
         )
@@ -16,25 +16,26 @@ class ResidualBlock(nn.Module):
         self.conv2 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64),
-            nn.LeakyReLU(inplace=True),
+            nn.ReLU(inplace=True),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64)
         )
         self.conv3 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64),
-            nn.LeakyReLU(inplace=True),
+            nn.ReLU(inplace=True),
             nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
             #nn.BatchNorm2d(64)
         )
 
         self.conv4 = nn.Sequential(
-            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
+            nn.Conv2d(in_channels=256, out_channels=64, kernel_size=1, stride=1, padding=0, bias=True),
            
         )
     def forward(self, x):
-        out1 = self.conv1(x)
-        out = out1 + x
+        out = self.conv1(x)
+        out1 = out + x
+        out = out +x
         out2 = self.conv2(out)
         out = out2 + x
         out3 = self.conv3(out)
@@ -55,7 +56,7 @@ class Net(nn.Module):
             #nn.BatchNorm2d(64),
             nn.ReLU(),
         )
-        self.layer1 = self.make_layer(ResidualBlock,  num_blocks=8)
+        self.layer1 = self.make_layer(ResidualBlock,  num_blocks=12)
        
         self.conv2 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=1, kernel_size=3, stride=1, padding=1, bias=True),
@@ -104,8 +105,8 @@ def normal_init(m, mean, std):
         # m.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
         # m.bias.data.zero_()
         print('Model7正在初始化权重')
-        # nn.init.xavier_uniform(m.weight)
+        nn.init.xavier_uniform(m.weight)
         # nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-        torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
+        # torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
         # torch.nn.init.normal_(m.weight, mean=0, std=1)
         # m.bias.data.zero_()
