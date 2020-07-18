@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-import torchsummary
-from torch.nn import init
-import torch.nn.functional as F
-import math
 import torch
 import torch.nn as nn
 import CFSRCNN.ops as ops
-  
+        
+
 class Net(nn.Module):
     def __init__(self, **kwargs):
         super(Net, self).__init__()
@@ -195,38 +191,6 @@ def normal_init(m, mean, std):
         print('CFSRCNN正在初始化权重')
         # nn.init.xavier_uniform(m.weight)
         # nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-        # torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
-        torch.nn.init.normal_(m.weight, mean=0, std=1)
+        torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
+        # torch.nn.init.normal_(m.weight, mean=0, std=1)
         # m.bias.data.zero_()
-
-
-
-
-
-
-def normal_init(m, mean, std):
-    if  isinstance(m, nn.Conv2d):
-        # m.weight.data.normal_(mean, std)
-        # m.init.xavier_uniform_(m.weight, gain=1)
-        # nn.init.xavier_uniform(m.weight)
-        # m.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-        # m.bias.data.zero_()
-        print('CFSRCNN正在初始化权重')
-        # nn.init.xavier_uniform(m.weight)
-        # nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='relu')
-        # torch.nn.init.kaiming_normal_(m.weight, a=0, mode='fan_in', nonlinearity='leaky_relu')
-        torch.nn.init.normal_(m.weight, mean=0, std=1)
-        # m.bias.data.zero_()
-
-
-def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)
-
-
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # PyTorch v0.4.0
-
-
-model = Net().to(device)
-torchsummary.summary(model,(1, 28, 28))
-print('parameters_count:',count_parameters(model))
