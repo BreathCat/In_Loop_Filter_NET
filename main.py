@@ -24,7 +24,7 @@ from SRGAN.solver import SRGANTrainer
 from FSRCNN.solver import FSRCNNTrainer
 from EDSR.solver import EDSRTrainer
 from CFSRCNN.solver import CFSRCNNTrainer
-
+from VRCNN5to3.solver import VRCNN5to3Trainer
 
 
 from dataset.data import get_training_set, get_test_set
@@ -38,7 +38,7 @@ parser = argparse.ArgumentParser(description='PyTorch Super Res Example')
 parser.add_argument('--batchSize', type=int, default=512, help='training batch size')
 parser.add_argument('--testBatchSize', type=int, default=128, help='testing batch size')
 parser.add_argument('--nEpochs', type=int, default=160, help='number of epochs to train for')
-parser.add_argument('--lr', type=float, default=0.01, help='Learning Rate. Default=0.01')
+parser.add_argument('--lr', type=float, default=0.001, help='Learning Rate. Default=0.01')
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 
 # model configuration
@@ -116,6 +116,8 @@ def main():
         model = EDSRTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'CFSRCNN':
         model = CFSRCNNTrainer(args, training_data_loader, testing_data_loader)
+    elif args.model == 'VRCNN5to3':
+        model = VRCNN5to3Trainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'VRCNN_ext_1conv':
         model = VRCNN_ext_1convTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'Multiresolution_CNN':
