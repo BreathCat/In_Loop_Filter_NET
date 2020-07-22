@@ -25,7 +25,7 @@ from FSRCNN.solver import FSRCNNTrainer
 from EDSR.solver import EDSRTrainer
 from CFSRCNN.solver import CFSRCNNTrainer
 from VRCNN5to3.solver import VRCNN5to3Trainer
-
+from Wide_Res.solver import Wide_ResTrainer
 
 from dataset.data import get_training_set, get_test_set
 from torchsummary import summary
@@ -44,7 +44,8 @@ parser.add_argument('--seed', type=int, default=123, help='random seed to use. D
 # model configuration
 parser.add_argument('--upscale_factor', '-uf',  type=int, default=1, help="super resolution upscale factor")
 parser.add_argument('--model', '-m', type=str, default='DLVC', help='choose which model is going to use')
-
+parser.add_argument('--widen_factor', default=4, type=int,
+                    help='widen factor (default: 10)')# for Wide_res Net
 args = parser.parse_args()
 
 
@@ -130,7 +131,8 @@ def main():
         model = Multiresolution_DLVCTrainer(args, training_data_loader, testing_data_loader)
     elif args.model == 'SRGAN':
         model = SRGANTrainer(args, training_data_loader, testing_data_loader)
-
+    elif args.model == 'Wide_Res':
+        model = Wide_ResTrainer(args, training_data_loader, testing_data_loader)
     else:
         raise Exception("the model does not exist")
 

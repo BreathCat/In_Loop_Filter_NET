@@ -79,7 +79,7 @@ class DLVCTrainer6(object):
 
     def save_model(self):
         root_dir='./model_save'
-        model_out_path = "model_6.pth"
+        model_out_path = "model_6_ver1.pth"
         model_out_path = join(root_dir, epo_ch,model_out_path)
         torch.save(self.model, model_out_path)
         print("Checkpoint saved to {}".format(model_out_path))
