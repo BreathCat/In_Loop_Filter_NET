@@ -52,7 +52,7 @@ class DLVCTrainer(object):
         self.upscale_factor = config.upscale_factor
         self.training_loader = training_loader
         self.testing_loader = testing_loader
-
+        self.QP = config.qp
     def build_model(self):
         self.model = Net(ResidualBlock).to(self.device)
         # self.model = torch.nn.DataParallel(Net, device_ids=[0, 1])
@@ -80,7 +80,8 @@ class DLVCTrainer(object):
     def save_model(self):
         root_dir='./model_save'
         model_out_path = "DLVC.pth"
-        model_out_path = join(root_dir, epo_ch,model_out_path)
+        # model_out_path = join(root_dir, epo_ch,model_out_path)
+        model_out_path = join(root_dir, epo_ch,"epoch"+epo_ch+"_QP"+str(self.QP)+"_"+model_out_path)
         torch.save(self.model, model_out_path)
         print("Checkpoint saved to {}".format(model_out_path))
 

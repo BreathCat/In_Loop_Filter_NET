@@ -40,7 +40,7 @@ parser.add_argument('--testBatchSize', type=int, default=128, help='testing batc
 parser.add_argument('--nEpochs', type=int, default=160, help='number of epochs to train for')
 parser.add_argument('--lr', type=float, default=0.001, help='Learning Rate. Default=0.01')
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
-
+parser.add_argument('--qp', type=int, default=32, help='which DIV2k dataset used ')
 # model configuration
 parser.add_argument('--upscale_factor', '-uf',  type=int, default=1, help="super resolution upscale factor")
 parser.add_argument('--model', '-m', type=str, default='DLVC', help='choose which model is going to use')
@@ -72,9 +72,9 @@ def main():
     # Set train dataset & test dataset
     # ===========================================================
     # print('===> Loading datasets')
-    train_set = get_training_set(args.upscale_factor)
+    train_set = get_training_set(args.upscale_factor,args.qp)
     # print('train_set:',type(train_set))
-    test_set = get_test_set(args.upscale_factor)
+    test_set = get_test_set(args.upscale_factor,args.qp)
     # print('test_set:',type(test_set))
     training_data_loader = DataLoader(dataset=train_set, batch_size=64, shuffle=True)
     dataiter = iter(training_data_loader)
@@ -91,7 +91,6 @@ def main():
     # print('imgs.size():',imgs.size())  # batch_size, channel, height, weight
     # print('imgs type:',labels[0,0,0,:10])
     # print('labels.size():',labels.size())  # batch_size, channel, height, weight
-
 
 
 

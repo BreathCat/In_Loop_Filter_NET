@@ -7,9 +7,10 @@ from torchvision.transforms import Compose, CenterCrop, ToTensor, Resize
 
 from .dataset import DatasetFromFolder
 
-output_image_dir='./dataset/Images_for_train/DIV2K_input_label'   #QP=37的９万对图像
+# output_image_dir='./dataset/Images_for_train/DIV2K_input_label'   #QP=37的９万对图像
 # output_image_dir='./dataset/Images_for_train/input_label'     #QP=37的4万对图像
 # output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP22'
+output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP32_LZHdataset'
 #output_image_dir='./dataset/Images_for_train/DIV2K_input_label'#使用的数据集，９万对
 #output_image_dir='./dataset/Images_for_train/input_label'#4万对
 # output_image_dir='./dataset/Images_for_train/ultra_high_resolution'
@@ -67,7 +68,14 @@ def target_transform(crop_size):
     ])
 
 
-def get_training_set(upscale_factor):
+def get_training_set(upscale_factor,QP):
+    if QP==32:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP32_LZHdataset'
+    if QP==22:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP22_LZHdataset'
+    if QP==27:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP27_LZHdataset'
+    print("QP=",output_image_dir)
     root_dir = output_image_dir
     # train_input_dir = join(root_dir, "train")
     train_input_dir = join(root_dir, "train","subim_input")
@@ -83,7 +91,14 @@ def get_training_set(upscale_factor):
 
 
 
-def get_test_set(upscale_factor):
+def get_test_set(upscale_factor,QP):
+    if QP==32:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP32_LZHdataset'
+    if QP==22:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP22_LZHdataset'
+    if QP==27:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP27_LZHdataset'
+    print("QP=",output_image_dir)
     root_dir = output_image_dir
     # test_dir = join(root_dir, "test")
     # test_input_dir = join(root_dir, "test")
