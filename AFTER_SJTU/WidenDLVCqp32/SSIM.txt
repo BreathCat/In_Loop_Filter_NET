@@ -1,0 +1,188 @@
+Group: ClassA 
+Image name: PeopleOnStreet_2560x1600_30_crop_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.891176 
+PSNR between groundtruth and HEVC is : 0.899140 
+PSNR between groundtruth and high_output(model) is : 0.904732 
+PSNR improved by HEVC / HEVC-off : 0.007963 
+PSNR improved by model / model-off : 0.013556 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.005592 
+
+Group: ClassA 
+Image name: Traffic_2560x1600_30_crop_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.892690 
+PSNR between groundtruth and HEVC is : 0.900495 
+PSNR between groundtruth and high_output(model) is : 0.907072 
+PSNR improved by HEVC / HEVC-off : 0.007804 
+PSNR improved by model / model-off : 0.014381 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.006577 
+
+ClassA  
+average improved by HEVC is : 0.007884 
+average improved by model is : 0.013969 
+average Comparing the Improving Effects of model and HEVC : 0.006085 
+***************************group end*******************************************
+Group: ClassB 
+Image name: BQTerrace_1920x1080_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.871069 
+PSNR between groundtruth and HEVC is : 0.873791 
+PSNR between groundtruth and high_output(model) is : 0.873773 
+PSNR improved by HEVC / HEVC-off : 0.002722 
+PSNR improved by model / model-off : 0.002704 
+Comparing the Improving Effects of model and HEVC / model-HEVC : -0.000018 
+
+Group: ClassB 
+Image name: BasketballDrive_1920x1080_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.881718 
+PSNR between groundtruth and HEVC is : 0.886968 
+PSNR between groundtruth and high_output(model) is : 0.889452 
+PSNR improved by HEVC / HEVC-off : 0.005250 
+PSNR improved by model / model-off : 0.007734 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.002484 
+
+Group: ClassB 
+Image name: Cactus_1920x1080_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.844969 
+PSNR between groundtruth and HEVC is : 0.850534 
+PSNR between groundtruth and high_output(model) is : 0.855498 
+PSNR improved by HEVC / HEVC-off : 0.005566 
+PSNR improved by model / model-off : 0.010529 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.004963 
+
+Group: ClassB 
+Image name: Kimono1_1920x1080_24_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.918889 
+PSNR between groundtruth and HEVC is : 0.928371 
+PSNR between groundtruth and high_output(model) is : 0.931050 
+PSNR improved by HEVC / HEVC-off : 0.009482 
+PSNR improved by model / model-off : 0.012161 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.002679 
+
+Group: ClassB 
+Image name: ParkScene_1920x1080_24_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.846492 
+PSNR between groundtruth and HEVC is : 0.851248 
+PSNR between groundtruth and high_output(model) is : 0.856113 
+PSNR improved by HEVC / HEVC-off : 0.004756 
+PSNR improved by model / model-off : 0.009621 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.004865 
+
+ClassB  
+average improved by HEVC is : 0.005555 
+average improved by model is : 0.008550 
+average Comparing the Improving Effects of model and HEVC : 0.002995 
+***************************group end*******************************************
+Group: ClassC 
+Image name: BQMall_832x480_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.876769 
+PSNR between groundtruth and HEVC is : 0.882502 
+PSNR between groundtruth and high_output(model) is : 0.891026 
+PSNR improved by HEVC / HEVC-off : 0.005732 
+PSNR improved by model / model-off : 0.014257 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.008525 
+
+Group: ClassC 
+Image name: BasketballDrillText_832x480_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.850855 
+PSNR between groundtruth and HEVC is : 0.858922 
+PSNR between groundtruth and high_output(model) is : 0.864084 
+PSNR improved by HEVC / HEVC-off : 0.008067 
+PSNR improved by model / model-off : 0.013229 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.005162 
+
+Group: ClassC 
+Image name: PartyScene_832x480_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.829137 
+PSNR between groundtruth and HEVC is : 0.831511 
+PSNR between groundtruth and high_output(model) is : 0.843095 
+PSNR improved by HEVC / HEVC-off : 0.002374 
+PSNR improved by model / model-off : 0.013959 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.011585 
+
+Group: ClassC 
+Image name: RaceHorses_832x480_30_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.861532 
+PSNR between groundtruth and HEVC is : 0.867393 
+PSNR between groundtruth and high_output(model) is : 0.874645 
+PSNR improved by HEVC / HEVC-off : 0.005861 
+PSNR improved by model / model-off : 0.013112 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.007251 
+
+ClassC  
+average improved by HEVC is : 0.005509 
+average improved by model is : 0.013639 
+average Comparing the Improving Effects of model and HEVC : 0.008131 
+***************************group end*******************************************
+Group: ClassD 
+Image name: BQSquare_416x240_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.862458 
+PSNR between groundtruth and HEVC is : 0.864753 
+PSNR between groundtruth and high_output(model) is : 0.873889 
+PSNR improved by HEVC / HEVC-off : 0.002295 
+PSNR improved by model / model-off : 0.011431 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.009136 
+
+Group: ClassD 
+Image name: BasketballPass_416x240_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.848281 
+PSNR between groundtruth and HEVC is : 0.852759 
+PSNR between groundtruth and high_output(model) is : 0.859295 
+PSNR improved by HEVC / HEVC-off : 0.004479 
+PSNR improved by model / model-off : 0.011014 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.006535 
+
+Group: ClassD 
+Image name: BlowingBubbles_416x240_50_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.813935 
+PSNR between groundtruth and HEVC is : 0.818396 
+PSNR between groundtruth and high_output(model) is : 0.828285 
+PSNR improved by HEVC / HEVC-off : 0.004460 
+PSNR improved by model / model-off : 0.014350 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.009889 
+
+Group: ClassD 
+Image name: RaceHorses_416x240_30_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.838035 
+PSNR between groundtruth and HEVC is : 0.844200 
+PSNR between groundtruth and high_output(model) is : 0.855088 
+PSNR improved by HEVC / HEVC-off : 0.006164 
+PSNR improved by model / model-off : 0.017052 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.010888 
+
+ClassD  
+average improved by HEVC is : 0.004350 
+average improved by model is : 0.013462 
+average Comparing the Improving Effects of model and HEVC : 0.009112 
+***************************group end*******************************************
+Group: ClassE 
+Image name: FourPeople_1280x720_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.925531 
+PSNR between groundtruth and HEVC is : 0.931940 
+PSNR between groundtruth and high_output(model) is : 0.937949 
+PSNR improved by HEVC / HEVC-off : 0.006409 
+PSNR improved by model / model-off : 0.012418 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.006009 
+
+Group: ClassE 
+Image name: Johnny_1280x720_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.928655 
+PSNR between groundtruth and HEVC is : 0.932345 
+PSNR between groundtruth and high_output(model) is : 0.935109 
+PSNR improved by HEVC / HEVC-off : 0.003689 
+PSNR improved by model / model-off : 0.006454 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.002764 
+
+Group: ClassE 
+Image name: KristenAndSara_1280x720_60_off1.bmp 
+PSNR between groundtruth and low_input(off) is : 0.939356 
+PSNR between groundtruth and HEVC is : 0.943450 
+PSNR between groundtruth and high_output(model) is : 0.947263 
+PSNR improved by HEVC / HEVC-off : 0.004094 
+PSNR improved by model / model-off : 0.007907 
+Comparing the Improving Effects of model and HEVC / model-HEVC : 0.003814 
+
+ClassE  
+average improved by HEVC is : 0.004731 
+average improved by model is : 0.008926 
+average Comparing the Improving Effects of model and HEVC : 0.004196 
+***************************group end*******************************************
+>> 
