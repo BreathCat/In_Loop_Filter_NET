@@ -69,12 +69,15 @@ def target_transform(crop_size):
 
 
 def get_training_set(upscale_factor,QP):
+    if QP==37:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label'
     if QP==32:
         output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP32_LZHdataset'
     if QP==22:
         output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP22_LZHdataset'
     if QP==27:
         output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP27_LZHdataset'
+    
     print("QP=",output_image_dir)
     root_dir = output_image_dir
     # train_input_dir = join(root_dir, "train")
@@ -92,6 +95,8 @@ def get_training_set(upscale_factor,QP):
 
 
 def get_test_set(upscale_factor,QP):
+    if QP==37:
+        output_image_dir='./dataset/Images_for_train/DIV2K_input_label'
     if QP==32:
         output_image_dir='./dataset/Images_for_train/DIV2K_input_label_QP32_LZHdataset'
     if QP==22:

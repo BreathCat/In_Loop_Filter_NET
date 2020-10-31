@@ -64,9 +64,11 @@ class Wide_ResTrainer(object):
         self.QP = config.qp
     def build_model(self):
         self.model = WideResNet(28, self.widen_factor, dropRate=0).to(self.device)
-        self.model.weight_init(mean=0.0, std=0.01)
+        print(self.widen_factor)
+        print(WideResNet)
+        # self.model.weight_init(mean=0.0, std=0.01)
         ######## below is loading existing model
-        # self.model = torch.load(r'/home/li/Desktop/LZH/CNN_NET/160epochWide_Res.pth')
+        self.model.load_state_dict(torch.load('/home/li/Desktop/LZH/CNN_NET/QP37_Wide_Res_state_dict.pth'))
         ######## above is loading existing model
         
         self.criterion = torch.nn.MSELoss()
@@ -92,8 +94,9 @@ class Wide_ResTrainer(object):
     def save_model(self):
         root_dir='./model_save'
         model_out_path = "Wide_Res.pth"
-        model_out_path = join(root_dir, epo_ch,"LZHdataset_epoch"+epo_ch+"_QP"+str(self.QP)+"_"+model_out_path)
+        model_out_path = join(root_dir, epo_ch,"LZHdataset_epoch"+epo_ch+"_QP"+str(self.QP)+"__reinitial_"+model_out_path)
         torch.save(self.model, model_out_path)
+        torch.save(self.model.state_dict(), root_dir+'/'+epo_ch+"/QP"+str(self.QP)+"__reinitial_"+ "Wide_Res_state_dict.pth")
         print("Checkpoint saved to {}".format(model_out_path))
 
     def train(self):
@@ -151,7 +154,7 @@ class Wide_ResTrainer(object):
             self.scheduler.step(epoch)
             # if epoch == self.nEpochs:
             #     self.save_model()
-            if epoch%20 == 0:
+            if epoch%20 == 0 or epoch == 1:
                 global epo_ch
                 epo_ch = str(epoch)
                 self.save_model()

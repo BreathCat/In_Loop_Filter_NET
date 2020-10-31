@@ -5,3 +5,4 @@ __pycache__
 /dataset/Images_for_train/
 *.pth
 *.bmp
+*.png

@@ -35,8 +35,8 @@ from torchsummary import summary
 # ===========================================================
 parser = argparse.ArgumentParser(description='PyTorch Super Res Example')
 # hyper-parameters
-parser.add_argument('--batchSize', type=int, default=512, help='training batch size')
-parser.add_argument('--testBatchSize', type=int, default=128, help='testing batch size')
+parser.add_argument('--batchSize', type=int, default=64, help='training batch size')
+parser.add_argument('--testBatchSize', type=int, default=64, help='testing batch size')
 parser.add_argument('--nEpochs', type=int, default=160, help='number of epochs to train for')
 parser.add_argument('--lr', type=float, default=0.001, help='Learning Rate. Default=0.01')
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
