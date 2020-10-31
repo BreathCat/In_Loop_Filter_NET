@@ -6,3 +6,13 @@ __pycache__
 *.pth
 *.bmp
 *.png
+
+AFTER_SJTU/WidenDLVCqp32/home/
+AFTER_SJTU/WidenDLVCqp32/build/
+AFTER_SJTU/WidenDLVCqp32/benchmark_results/
+AFTER_SJTU/WidenDLVCqp32/epochs/
+AFTER_SJTU/WidenDLVCqp32/data/
+AFTER_SJTU/WidenDLVCqp32/images/
+AFTER_SJTU/WidenDLVCqp32/test_model_Class_ABCDE/
+AFTER_SJTU/WidenDLVCqp32/__pycache__/
+
